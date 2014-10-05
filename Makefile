@@ -1,4 +1,5 @@
 
+XBSVDIR=/usr/share/xbsv
 ## hardware interfaces invoked from software (requests)
 S2H = Swallow EchoRequest
 ## software interfaces invoked from hardware (indications)
@@ -16,5 +17,5 @@ NUMBER_OF_MASTERS =0
 ## for testing fpgamake:
 FPGAMAKE_XBSVFLAGS += -P mkEchoIndicationProxySynth -P mkEchoRequestWrapperMemPortalPipes
 
-include /usr/share/xbsv/Makefile.xbsv
+include $(XBSVDIR)/Makefile.xbsv
 
